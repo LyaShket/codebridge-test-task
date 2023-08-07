@@ -8,6 +8,9 @@ import { AppArticleViewComponent } from './app-article-view.component';
   declarations: [
     AppArticleViewComponent
   ],
+  exports: [
+    AppArticleViewComponent
+  ],
   imports: [
     CommonModule
   ]

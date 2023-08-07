@@ -8,6 +8,9 @@ import { AppSearchInputComponent } from './app-search-input.component';
   declarations: [
     AppSearchInputComponent
   ],
+  exports: [
+    AppSearchInputComponent
+  ],
   imports: [
     CommonModule
   ]
