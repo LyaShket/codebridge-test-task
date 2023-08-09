@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { GetArticleList } from '../../state/app.actions';
 import { AppState } from '../../state/app.state';
-import { BehaviorSubject, debounceTime, distinctUntilChanged, Observable, Subject, tap } from 'rxjs';
+import { BehaviorSubject, debounceTime, distinctUntilChanged, Observable } from 'rxjs';
 import { IArticle } from '../../core/interfaces/state/article.interface';
 import { FormControl, FormGroup } from '@angular/forms';
 
