@@ -1,10 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-link-arrow',
   templateUrl: './app-link-arrow.component.html',
-  styleUrls: ['./app-link-arrow.component.scss']
 })
 export class AppLinkArrowComponent {
-
+  @Input() arrow!: 'left' | 'right';
 }

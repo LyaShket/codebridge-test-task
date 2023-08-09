@@ -1,1 +1,5 @@
-<p>app-link-arrow works!</p>
+<a>
+  <mat-icon *ngIf="arrow === 'left'" class="rotate-180">arrow_right_alt</mat-icon>
+  <ng-content></ng-content>
+  <mat-icon *ngIf="arrow === 'right'">arrow_right_alt</mat-icon>
+</a>

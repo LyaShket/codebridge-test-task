@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppLinkArrowComponent } from './app-link-arrow.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -8,8 +9,12 @@ import { AppLinkArrowComponent } from './app-link-arrow.component';
   declarations: [
     AppLinkArrowComponent
   ],
+  exports: [
+    AppLinkArrowComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatIconModule
   ]
 })
 export class AppLinkArrowModule { }
