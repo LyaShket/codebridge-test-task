@@ -3,7 +3,7 @@ import { Select, Store } from '@ngxs/store';
 import { AppState } from '../../state/app.state';
 import { Observable } from 'rxjs';
 import { IArticle } from '../../core/interfaces/state/article.interface';
-import { GetArticle, GetArticleList } from '../../state/app.actions';
+import { GetArticle } from '../../state/app.actions';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
