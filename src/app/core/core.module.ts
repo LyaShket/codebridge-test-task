@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HighlighterPipe } from './pipes/highlighter.pipe';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    HighlighterPipe
+  ],
+  exports: [
+    HighlighterPipe
+  ],
   imports: [
     CommonModule
   ]

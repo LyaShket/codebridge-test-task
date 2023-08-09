@@ -12,6 +12,7 @@ import { IArticle } from '../../core/interfaces/state/article.interface';
 })
 export class HomeComponent implements OnInit {
   @Select(AppState.list) articleList$!: Observable<IArticle[]>;
+  @Select(AppState.search) search$!: Observable<string>;
 
   protected readonly Date = Date;
 

@@ -5,12 +5,10 @@
       <mat-icon>calendar_today</mat-icon>
       {{created | date}}
     </mat-card-subtitle>
-    <mat-card-title>{{title}}</mat-card-title>
+    <mat-card-title [innerHtml]="title"></mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <p>
-      {{text}}
-    </p>
+    <p [innerHtml]="text"></p>
   </mat-card-content>
   <mat-card-actions>
     <app-link-arrow [arrow]="'right'">Read more</app-link-arrow>

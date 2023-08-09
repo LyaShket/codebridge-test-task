@@ -9,8 +9,8 @@
 
   <div class="grid grid-cols-3 grid-rows-3 gap-10">
     <app-article-preview-card *ngFor="let item of articleList$ | async"
-                              [title]="item.title"
-                              [text]="item.summary"
+                              [title]="item.title | highlighter: (search$ | async)"
+                              [text]="item.summary | highlighter: (search$ | async)"
                               [image]="item.image_url"
                               [created]="item.published_at"
                               [routerLink]="'/article/' + item.id"
