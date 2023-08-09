@@ -8,7 +8,7 @@ export class HighlighterPipe implements PipeTransform {
   transform(text: string, searchText: string | null): string {
     if (!searchText) return text;
 
-    const re = new RegExp("\\b("+searchText+"\\b)", 'igm');
+    const re = new RegExp(`\\b(${searchText.replace(/\s+/g, '|')}\\b)`, 'igm');
     text = text.replace(re, '<span class="highlighted-text">$&</span>');
     console.log(text);
     return text;
