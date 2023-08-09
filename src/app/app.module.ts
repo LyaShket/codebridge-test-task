@@ -8,6 +8,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CoreModule } from './core/core.module';
 import { NgxsModule } from '@ngxs/store';
 import { AppState } from './state/app.state';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { AppState } from './state/app.state';
     NgxsModule.forRoot([
       AppState,
     ]),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,9 @@
+import { IArticle } from './article.interface';
+
 export interface IApp {
-  list: any[];
+  list: IArticle[];
   listLoaded: boolean;
-  article: any;
+  article: IArticle | null;
   articleLoaded: boolean;
   search: string;
 }

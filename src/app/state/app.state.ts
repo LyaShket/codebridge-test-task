@@ -63,9 +63,9 @@ export class AppState {
         ctx.dispatch(new ShowNotificationError(error.error.errors.body[0]));
         return of(error);
       })
-    ).subscribe((response) => {
+    ).subscribe((article) => {
       ctx.patchState({
-        article: response.article,
+        article: article,
         articleLoaded: true,
       });
     });
@@ -84,9 +84,9 @@ export class AppState {
         ctx.dispatch(new ShowNotificationError(error.error.errors.body[0]));
         return of(error);
       })
-    ).subscribe((response) => {
+    ).subscribe((res) => {
       ctx.patchState({
-        list: response.articles,
+        list: res.results,
         listLoaded: true,
       });
     });

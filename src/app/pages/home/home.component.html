@@ -8,12 +8,12 @@
   <hr class="mb-6">
 
   <div class="grid grid-cols-3 grid-rows-3 gap-10">
-    <app-article-preview-card *ngFor="let i of [].constructor(9); let idx = index"
-                              [title]="'Title'"
-                              [text]="'Text'"
-                              [image]="'https://picsum.photos/1920/1080?random=' + idx"
-                              [created]="Date.now()"
-                              [routerLink]="'/article/' + idx"
+    <app-article-preview-card *ngFor="let item of articleList$ | async"
+                              [title]="item.title"
+                              [text]="item.summary"
+                              [image]="item.image_url"
+                              [created]="item.published_at"
+                              [routerLink]="'/article/' + item.id"
     ></app-article-preview-card>
   </div>
 </div>
