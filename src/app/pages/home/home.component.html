@@ -1,7 +1,7 @@
 <div class="container mx-auto pt-6">
   <form>
     <p>Filter by keywords</p>
-    <app-search-input [placeholder]="'Filter by keywords'"></app-search-input>
+    <app-search-input [placeholder]="'Filter by keywords'" (onChange)="submitSearchForm()" [formGroup]="searchForm"></app-search-input>
   </form>
 
   <p>Results: 9</p>

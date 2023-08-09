@@ -1,4 +1,4 @@
-<mat-form-field>
+<mat-form-field [formGroup]="formGroup">
   <mat-icon matPrefix>search</mat-icon>
-  <input matInput [placeholder]="placeholder">
+  <input matInput [placeholder]="placeholder" (change)="onChange.emit()" formControlName="search">
 </mat-form-field>
