@@ -1,5 +1,5 @@
 import { State, Action, StateContext, Selector } from '@ngxs/store';
-import { GetArticle, GetArticleList, ShowNotificationError } from './app.actions';
+import { GetArticle, GetArticleList, InitArticleList, ShowNotificationError } from './app.actions';
 import { Injectable } from '@angular/core';
 import { catchError, of } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -90,6 +90,15 @@ export class AppState {
         listLoaded: true,
       });
     });
+  }
+
+  @Action(InitArticleList)
+  initArticleList(ctx: StateContext<IApp>, action: InitArticleList) {
+    if (ctx.getState().list.length || ctx.getState().search.length) {
+      return;
+    }
+
+    return ctx.dispatch(new GetArticleList());
   }
 
   @Action(ShowNotificationError)

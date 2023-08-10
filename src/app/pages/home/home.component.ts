@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
-import { GetArticleList } from '../../state/app.actions';
+import { GetArticleList, InitArticleList } from '../../state/app.actions';
 import { AppState } from '../../state/app.state';
-import { BehaviorSubject, debounceTime, distinctUntilChanged, Observable } from 'rxjs';
+import { BehaviorSubject, debounceTime, distinctUntilChanged, Observable, Subject } from 'rxjs';
 import { IArticle } from '../../core/interfaces/state/article.interface';
 import { FormControl, FormGroup } from '@angular/forms';
 
@@ -18,11 +18,17 @@ export class HomeComponent implements OnInit {
   searchForm = new FormGroup({
     search: new FormControl(''),
   });
-  searchSubject = new BehaviorSubject<string>('');
+  searchSubject = new Subject<string>();
 
   constructor(private store: Store) { }
 
   ngOnInit(): void {
+    this.store.dispatch(new InitArticleList());
+
+    this.search$.subscribe((search: string) => {
+      this.searchForm.patchValue({ search });
+    });
+
     this.searchSubject.pipe(
       debounceTime(500),
       distinctUntilChanged(),

@@ -3,6 +3,11 @@ export class GetArticleList {
   constructor(public search: string = '') { }
 }
 
+export class InitArticleList {
+  static readonly type = '[Article] Init Article List';
+  constructor() { }
+}
+
 export class GetArticle {
   static readonly type = '[Article] Get Article';
   constructor(public id: string) { }
