@@ -1,5 +1,5 @@
 <div class="container mx-auto pt-6">
-  <form class="max-w-2xl">
+  <form class="max-w-2xl" [formGroup]="searchForm">
     <p class="font-semibold mb-1">Filter by keywords</p>
     <app-search-input [placeholder]="'Filter by keywords'" (onChange)="submitSearchForm()" [formGroup]="searchForm"></app-search-input>
   </form>
