@@ -13,6 +13,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
   @Select(AppState.list) articleList$!: Observable<IArticle[]>;
+  @Select(AppState.listLoaded) listLoaded$!: Observable<boolean>;
   @Select(AppState.search) search$!: Observable<string>;
 
   searchForm = new FormGroup({

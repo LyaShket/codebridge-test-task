@@ -13,6 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ArticleComponent implements OnInit {
   @Select(AppState.article) article$!: Observable<IArticle>;
+  @Select(AppState.articleLoaded) articleLoaded$!: Observable<boolean>;
 
   constructor(
     private store: Store,

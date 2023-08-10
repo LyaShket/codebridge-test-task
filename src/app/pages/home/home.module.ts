@@ -6,6 +6,7 @@ import { AppSearchInputModule } from '../../shared/app-search-input/app-search-i
 import { AppArticlePreviewCardModule } from '../../shared/app-article-preview-card/app-article-preview-card.module';
 import { CoreModule } from '../../core/core.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppLoadingModule } from '../../shared/app-loading/app-loading.module';
 
 
 
@@ -20,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppArticlePreviewCardModule,
     CoreModule,
     ReactiveFormsModule,
+    AppLoadingModule,
   ]
 })
 export class HomeModule { }

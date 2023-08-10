@@ -1,13 +1,22 @@
-<section class="pt-36" *ngIf="article$ | async as article">
-  <img [src]="article.image_url" alt="article background" class="absolute left-0 top-0 w-full object-cover h-60">
+<section class="pt-36" *ngIf="articleLoaded$ | async; else loading">
+  <ng-container *ngIf="article$ | async as article">
+    <img [src]="article.image_url" alt="article background" class="absolute left-0 top-0 w-full object-cover h-60">
 
-  <div class="container mx-auto">
-    <app-article-view
-        [title]="article.title"
-        [text]="article.summary"
-    ></app-article-view>
-    <p class="pt-5 pl-11">
-      <app-link-arrow [arrow]="'left'" routerLink="/">Back to homepage</app-link-arrow>
-    </p>
-  </div>
+    <div class="container mx-auto">
+      <app-article-view
+          [title]="article.title"
+          [text]="article.summary"
+      ></app-article-view>
+
+      <p class="pt-5 pl-11">
+        <app-link-arrow [arrow]="'left'" routerLink="/">Back to homepage</app-link-arrow>
+      </p>
+    </div>
+  </ng-container>
 </section>
+
+<ng-template #loading>
+  <p class="p-2">
+    <app-loading></app-loading>
+  </p>
+</ng-template>

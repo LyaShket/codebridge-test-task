@@ -5,6 +5,7 @@ import { ArticleRoutingModule } from './article-routing.module';
 import { AppArticleViewModule } from '../../shared/app-article-view/app-article-view.module';
 import { AppLinkArrowModule } from '../../shared/app-link-arrow/app-link-arrow.module';
 import { MatCardModule } from '@angular/material/card';
+import { AppLoadingModule } from '../../shared/app-loading/app-loading.module';
 
 
 
@@ -18,6 +19,7 @@ import { MatCardModule } from '@angular/material/card';
     AppArticleViewModule,
     AppLinkArrowModule,
     MatCardModule,
+    AppLoadingModule,
   ]
 })
 export class ArticleModule { }
