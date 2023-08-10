@@ -1,0 +1,14 @@
+.article-view-card {
+  min-height: 200px;
+  padding: 2rem;
+
+  .mat-mdc-card-header {
+    align-self: center;
+  }
+
+  .mat-mdc-card-title {
+    margin-bottom: 2rem;
+    text-align: center !important;
+    width: 100%;
+  }
+}

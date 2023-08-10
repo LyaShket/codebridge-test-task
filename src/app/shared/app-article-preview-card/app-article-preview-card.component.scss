@@ -1,0 +1,28 @@
+.article-preview-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .mat-mdc-card-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .mat-mdc-card-title {
+    line-height: 120%;
+    margin-bottom: 0.7rem;
+    min-height: 50px;
+  }
+
+  .mat-mdc-card-content {
+    line-height: 140%;
+    margin-bottom: 0.7rem;
+  }
+
+  .mat-mdc-card-actions {
+    margin-top: auto;
+    padding: 0 16px;
+  }
+}

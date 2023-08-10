@@ -1,9 +1,9 @@
-<mat-card class="example-card">
+<mat-card class="article-preview-card cursor-pointer hover:scale-105 transition-transform">
   <img mat-card-image [src]="image" [alt]="title" class="h-56 object-cover">
   <mat-card-header>
     <mat-card-subtitle>
-      <mat-icon>calendar_today</mat-icon>
-      {{created | date}}
+      <mat-icon class="small-icon">calendar_today</mat-icon>
+      <span>{{created | date}}</span>
     </mat-card-subtitle>
     <mat-card-title [innerHtml]="title"></mat-card-title>
   </mat-card-header>
